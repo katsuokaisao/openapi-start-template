@@ -1,0 +1,18 @@
+get:
+  summary: Info for a specific pet
+  tags:
+    - pets
+  parameters:
+    - name: petId
+      in: path
+      required: true
+      description: The id of the pet to retrieve
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Expected response to a valid request
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/pet.yml"

@@ -1,0 +1,27 @@
+get:
+  summary: List all pets
+  operationId: listPets
+  tags:
+    - pet
+  parameters:
+    - name: limit
+      in: query
+      description: How many items to return at one time (max 100)
+      required: false
+      schema:
+        type: integer
+        format: int64
+  responses:
+    '200':
+      description: A paged array of pets
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/pets.yml"
+post:
+  summary: Create a pet
+  tags:
+    - pet
+  responses:
+    '201':
+      description: created

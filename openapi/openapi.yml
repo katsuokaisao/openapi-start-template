@@ -1,0 +1,14 @@
+openapi: 3.0.0
+info:
+  title: openapi-starter
+  description: openapi starter
+  version: 1.0.0
+tags:
+  - name: pet
+    description: ペット
+paths:
+  /pets:
+    $ref: "paths/pets/pets.yml"
+  # /pets/{petId}:
+  #   $ref: "paths/pets/petId.yml"
+
